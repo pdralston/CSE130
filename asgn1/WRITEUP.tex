@@ -1,0 +1,15 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+\section*{Assignment 1}
+	I would say about a third of my code was spent on either handling error cases. I have spent more time than I can remember on testing the edge cases on my system, though as of the writing of this my write is still super broken.
+	If a connection is closed mid processing, my Bounded$\_$Buffer class sets it's client$\_$fd member to 0 which will cause my inner loop to exit and begin waiting to accept the next connection. This could be caused by the client closing their connection by closing the application they are using to connect or a power outage or communication line interruption. 
+\section*{Testing}
+The server was tested by taking functions that could be isolated from the project and running smaller applets with a series of inputs and then verifying their outputs. Functions that were not able to be isolated were tested in place using a series of print statements and breakpoints during running of the server as it fielded requests from the client.
+\end{document}

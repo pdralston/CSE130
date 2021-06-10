@@ -1,0 +1,19 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+\section*{Assignment 3}
+	I have written my hashtable to be a lock table. This increases concurrency by allowing more threads access to the hash table at a time.\\
+	During recursive name lookup I have to lock the entire table which reduces concurrency to 0 until the lookup completes.\\
+	I did not do much additional testing. I added some time flags around my code and compared processing times as I increased data size to get
+	a rough idea of how quickly my latency increased as workload increased, but by and large I relied on my design to have an acceptable outcome.
+	Not the best policy, but my priority goal was to have a more accurately functional offering than I did for asgn2.
+	
+\section*{Testing}
+I used a combination of unit testing and scripting to test the functionality of my program.
+\end{document}

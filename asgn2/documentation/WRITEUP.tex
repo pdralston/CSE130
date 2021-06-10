@@ -1,0 +1,17 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+\section*{Assignment 2}
+	If an arithmetic command uses three variables then the critical section code would neccesarily be the entire process as the final value needs to be assigned atomically. for example if the command is add,c,b,c and another command add,a,c,c is running parallel, then interlacing the operations could result in different states of c. Therefore, c would need to be handled atomically to ensure continuity of c. This reduces overall parallelism in exchange for greater accuracy.
+	
+	The latency of the rpcserver single-thread response is increased, but the throughput is increased in exchange.
+	
+\section*{Testing}
+The same tests that were performed on asgn1 were performed on assgn2. In addition, a script that ran a client with the sleep,100 operation along with a loop that ran various server commands in the background was ran in order to test multi-threaded functionality. The hash-table itself was unit-tested on each function sperately from the server. 
+\end{document}
